@@ -1,14 +1,13 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      InAppBrowser Example DEMO Ionic v3 anc Ionic CLI v3
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <button ion-button (click)="openWithSystemBrowser('https://www.techiediaries.com')">Open with System browser</button>
+  <button ion-button (click)="openWithInAppBrowser('https://www22.verizon.com/CoFEE/Content/PreOrderingD2D/AccountRetrieval/Pages/ARSearchRequest.aspx?Parameter=Mohfaritt0&SearchType=Login&HostName=&AltChannel=True')">Open with In App browser</button>
+  <button ion-button (click)="openWithCordovaBrowser('https://www22.verizon.com/CoFEE/Content/PreOrderingD2D/AccountRetrieval/Pages/ARSearchRequest.aspx?Parameter=Mohfaritt0&SearchType=Login&HostName=&AltChannel=True')">Open with Cordova browser</button>
 </ion-content>

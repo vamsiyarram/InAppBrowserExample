@@ -1,0 +1,38 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>
+          <label>
+            <input type="text" placeholder="User ID" name="loginid" [(ngModel)]="loginCredentials.LoginId" required />
+          </label>
+          <label>
+            <input type="text" placeholder="Password" name="password" [(ngModel)]="loginCredentials.Password" required />
+          </label>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button (click)=login()>Sign In</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
+</ion-content>

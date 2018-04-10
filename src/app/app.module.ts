@@ -3,28 +3,39 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { HttpModule } from '@angular/http';
+import { CookieService } from 'ng2-cookies';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
+import { ServiceGatewayProvider } from '../providers/service-gateway/service-gateway';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    LoginPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    InAppBrowser,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ServiceGatewayProvider,
+    CookieService
   ]
 })
 export class AppModule {}
